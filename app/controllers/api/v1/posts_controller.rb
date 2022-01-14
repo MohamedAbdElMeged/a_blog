@@ -3,6 +3,7 @@ class Api::V1::PostsController < ApplicationController
     before_action :logged_in_user, only: [:create]
     before_action :set_post, except: [:create]
     def create
+        puts @user
         post = PostsHelper.create(post_params, @user)
         render "create",locals: {post: post,user: @user}
     end
