@@ -20,6 +20,8 @@ gem "jwt"
 gem "rdkafka"
 gem "sidekiq"
 gem "foreman"
+gem "grpc"
+gem "grpc-tools"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

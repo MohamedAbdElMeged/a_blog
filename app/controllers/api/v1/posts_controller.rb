@@ -7,7 +7,9 @@ class Api::V1::PostsController < ApplicationController
         render "create",locals: {post: post,user: @user}
     end
     def show
-        render "create",locals: {post: @post,user: nil}
+        user = GrpcUserHelper.grpc_user_get(@post.user_id)
+        puts user
+        render "create",locals: {post: @post,user: user}
     end
     private
     def post_params
